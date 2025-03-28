@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoie a InfoLearn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 80px;
+            height: auto;
+        }
+        .container {
+            max-width: 800px;
+            margin: 80px auto 20px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        .mission-text {
+            background-color: #fff9e6;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border: 1px solid #ffeeba;
+        }
+        .hidden-contacts {
+            display: none; /* Contatos ocultos inicialmente */
+        }
+        .btn {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 400px;
+            cursor: pointer;
+        }
+        .btn-pdf {
+            background-color: #27ae60;
+        }
+        .btn-toggle {
+            background-color: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <img src="logo.jpg" alt="Logo InfoLearn" class="logo">
+
+    <div class="container">
+        <h1>POR QUE NOSSOS CURSOS SÃO GRATUITOS?</h1>
+        
+        <div class="mission-text">
+            <p><strong>Podíamos cobrar, mas escolhemos compartilhar!</strong><br>
+            Decidimos de livre vontade oferecer todo conhecimento sem custos. Se nosso trabalho te ajudar, pedimos que retribua <em>se possível</em> ajudando outros ou apoiando nossa causa.</p>
+        </div>
+
+        <!-- Botão para mostrar contatos ocultos -->
+        <button class="btn btn-toggle" onclick="toggleContacts()">
+            📲 MOSTRAR CONTATOS PARA APOIO
+        </button>
+
+        <!-- Contatos ocultos inicialmente -->
+        <div class="hidden-contacts" id="contacts">
+            <div class="payment-method">
+                <h3>🗳️ M-pesa</h3>
+                <p>(+258) 84 418 0213</p>
+            </div>
+
+            <div class="payment-method">
+                <h3>📱 E-mola</h3>
+                <p>(+258) 87 808 0213</p>
+            </div>
+        </div>
+
+        <!-- Botão para PDFs -->
+        <a href="https://drive.google.com/drive/folders/1c7joWMQXb11fQHMii7w4CZxoJaGBcnBz" class="btn btn-pdf" target="_blank">
+            📥 OBTER PDFs DOS MÓDULOS
+        </a>
+
+        <!-- Conta Bancária -->
+        <div class="payment-method">
+            <h3>🏦 Millennium BIM</h3>
+            <p>Nº da Conta: 1004909040</p>
+        </div>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/258844180213" class="btn" target="_blank">
+            💬 FALE DIRETAMENTE CONOSCO
+        </a>
+
+    </div>
+
+    <script>
+        function toggleContacts() {
+            const contactsDiv = document.getElementById('contacts');
+            if (contactsDiv.style.display === 'none' || contactsDiv.style.display === '') {
+                contactsDiv.style.display = 'block';
+            } else {
+                contactsDiv.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
